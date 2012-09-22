@@ -1,0 +1,42 @@
+div.content {
+  max-width: 800px;
+  margin: 5% auto;
+}
+
+@cold-color: blue;
+@warm-color: red;
+
+.warm (@percent) {
+  background-color: mix(@warm-color, white, @percent);
+}
+
+.cold (@percent) {
+  background-color: mix(@cold-color, white, @percent);
+}
+
+body {
+  &.colder {
+    &.by1 { .cold(10%); }
+    &.by2 { .cold(20%); }
+    &.by3 { .cold(30%); }
+    &.by4 { .cold(40%); }
+    &.by5 { .cold(50%); }
+    &.by6 { .cold(60%); }
+    &.by7 { .cold(70%); }
+    &.by8 { .cold(80%); }
+    &.by9 { .cold(90%); }
+    &.by10 { .cold(100%); }
+  }
+  &.warmer {
+    &.by1 { .warm(10%); }
+    &.by2 { .warm(20%); }
+    &.by3 { .warm(30%); }
+    &.by4 { .warm(40%); }
+    &.by5 { .warm(50%); }
+    &.by6 { .warm(60%); }
+    &.by7 { .warm(70%); }
+    &.by8 { .warm(80%); }
+    &.by9 { .warm(90%); }
+    &.by10 { .warm(100%); }
+  }
+}

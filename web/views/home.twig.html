@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <link rel="stylesheet/less" type="text/css" href="/css/style.less">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/js/less-1.3.0.min.js"></script>
+    <script src="https://raw.github.com/davatron5000/FitText.js/master/jquery.fittext.js"></script>
+  </head>
+  <body class="{{ bodyClasses }}">
+    <div class="content">
+      <div class="big">{{ adjective }} yesterday</div>
+      <div class="today">{{ data.currentTemp }}&#186;F</div>
+      <div class="yesterday">{{ data.yesterdayTemp }}&#186;F</div>
+
+      <pre>{{ debug }}</pre>
+    </div>
+
+
+
+    <script>
+      $('.big').fitText();
+    </script>
+  </body>
+</html>
+
